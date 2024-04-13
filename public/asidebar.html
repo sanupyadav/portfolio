@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.5.1-web/css/all.css">
+    <title>Document</title>
+</head>
+<body class="flex flex-row gap-x-10 overflow-y-auto bg-gray-600 w-full h-screen" style="height: 1200px;">
+    <aside class="bg-white w-80 ml-16 mt-48 rounded-2xl sticky" style="height: 700px;">
+        <!-- Aside Content Here -->
+    </aside>
+    <main class="bg-white h-3/4 flex-grow mx-0 mt-48 rounded-2xl" style="overflow-y: auto;">
+        <!-- Main Content Here -->
+    </main>
+    <nav class="bg-green-600 h-96 w-28 mr-16 mt-48 rounded-2xl flex flex-col justify-between">
+        <!-- Navigation Content Here -->
+    </nav>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            var aside = document.querySelector('aside');
+            var main = document.querySelector('main');
+            var nav = document.querySelector('nav');
+
+            if (window.scrollY >= 48) {
+                aside.style.position = 'fixed';
+                aside.style.top = '0';
+                main.style.marginLeft = '112px'; // Adjust based on the width of the aside
+                nav.style.marginLeft = '112px'; // Adjust based on the width of the aside
+            } else {
+                aside.style.position = 'relative';
+                main.style.marginLeft = '0';
+                nav.style.marginLeft = '0';
+            }
+        });
+    </script>
+</body>
+</html>
