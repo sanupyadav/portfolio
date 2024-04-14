@@ -1,12 +1,13 @@
 var tl = gsap.timeline();
 
-tl.from(".main ",{
-    opacity:0,
+gsap.from(".main ",{
+    scale:0,
+    duration:1,
     stagger:0.5
 })
 
 
-tl.from(".aside ", {
+gsap.from(".aside ", {
     x:-50,
     duration:1,
     delay:0.5,
@@ -14,35 +15,24 @@ tl.from(".aside ", {
     stagger:0.2
 })
 
-tl.from(".nav ", {
+gsap.from(".nav ", {
     x:40,
     duration:1,
     delay:0.5,
     opacity:0,
     stagger:0.2
 })
-tl.from(".main h1",{
+
+gsap.from(".main h1",{
     x:30,
+    duration:2,
     opacity:0,
-    stagger:0.3
+    // stagger:0.3
 })
 
-
-
-tl.from(".main>img",{
-    opacity:0,
-    stagger:0.2
-})
-
-tl.from("h5",{
+gsap.from(".main h5",{
+    duration:2,
     scale:0,
     opacity:0
 
 })
-// tl.from("h5",{
-//     y:30,
-//     // repeat:-1,
-//     duration:0.6,
-//     yoyo:true,
-
-// })
